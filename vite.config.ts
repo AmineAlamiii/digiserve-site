@@ -57,15 +57,6 @@ export default defineConfig({
       '@': '/src'
     }
   },
-  // Optimisations pour le CSS
-  css: {
-    postcss: {
-      plugins: [
-        require('autoprefixer'),
-        require('tailwindcss')
-      ]
-    }
-  },
   // Optimisations pour les métadonnées
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
