@@ -5,19 +5,4 @@ Allow: /
 Sitemap: https://digiservweb.com/sitemap.xml
 
 # Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin areas (if any)
-Disallow: /admin/
-Disallow: /private/
-
-# Allow important pages
-Allow: /services/
-Allow: /portfolio/
-Allow: /contact/
-Allow: /about/
-
-# Block common bot traps
-Disallow: /search?
-Disallow: /filter?
-Disallow: /sort? 
+Crawl-delay: 1 
