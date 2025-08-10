@@ -17,15 +17,16 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4"
       onClick={handleBackdropClick}
     >
-      <div className="relative bg-white rounded-2xl overflow-hidden max-w-4xl w-full max-h-[90vh]">
+      <div className="relative bg-white rounded-2xl overflow-hidden max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh]">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors duration-200"
+          className="absolute top-2 sm:top-4 right-2 sm:right-4 z-10 bg-black/50 text-white p-1.5 sm:p-2 rounded-full hover:bg-black/70 transition-colors duration-200"
+          aria-label="Fermer la vidéo"
         >
-          <X className="h-6 w-6" />
+          <X className="h-4 w-4 sm:h-6 sm:w-6" />
         </button>
         
         <div className="aspect-video">
@@ -39,11 +40,11 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
           />
         </div>
         
-        <div className="p-6">
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+        <div className="p-4 sm:p-6">
+          <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-2">
             Digital Service Technologie
           </h3>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm sm:text-base">
             Découvrez notre approche unique et nos solutions digitales innovantes pour propulser votre entreprise vers le succès.
           </p>
         </div>
