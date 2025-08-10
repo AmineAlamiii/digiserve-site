@@ -32,6 +32,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:domain": "vite --host digiservweb.com --port 3000",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
