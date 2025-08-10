@@ -14,7 +14,7 @@ function App() {
   return (
     <HelmetProvider>
       <div className="min-h-screen">
-        <SEO page="home" />
+        <SEO />
         <Header />
         <main>
           <Hero />
