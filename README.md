@@ -121,7 +121,8 @@ digiserve-site/
 ## 📞 Contact
 
 - **Email**: contact@digiservweb.com
-- **Téléphone**: +212 6 XX XX XX XX
+- **Téléphone Mobile**: +212 6 94 86 41 49
+- **Téléphone Fixe**: 05 32 02 57 39
 - **Adresse**: Fès, Maroc
 - **Site Web**: [https://digiservweb.com](https://digiservweb.com)
 

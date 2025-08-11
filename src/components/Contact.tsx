@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Phone, PhoneCall, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -70,6 +70,18 @@ const Contact = () => {
   };
 
   const contactInfo = [
+    {
+      icon: Phone,
+      title: 'Téléphone Mobile',
+      info: '+212 6 94 86 41 49',
+      description: 'Appel direct'
+    },
+    {
+      icon: PhoneCall,
+      title: 'Téléphone Fixe',
+      info: '05 32 02 57 39',
+      description: 'Bureau'
+    },
     {
       icon: Mail,
       title: 'Email',

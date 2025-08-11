@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Zap, Facebook, Instagram, Mail, Phone, PhoneCall, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -51,6 +51,14 @@ const Footer = () => {
             </p>
 
             <div className="space-y-1.5 sm:space-y-2 md:space-y-3">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <Phone className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-blue-400 flex-shrink-0" />
+                <span className="text-gray-300 text-xs sm:text-sm md:text-base">+212 6 94 86 41 49</span>
+              </div>
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <PhoneCall className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-blue-400 flex-shrink-0" />
+                <span className="text-gray-300 text-xs sm:text-sm md:text-base">05 32 02 57 39</span>
+              </div>
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Mail className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-blue-400 flex-shrink-0" />
                 <span className="text-gray-300 text-xs sm:text-sm md:text-base">contact@digiservweb.com</span>
