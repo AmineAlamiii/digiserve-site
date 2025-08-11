@@ -26,6 +26,18 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isMenuOpen]);
 
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [isMenuOpen]);
+
   const menuItems = [
     { name: 'Accueil', href: '#home' },
     { name: 'Services', href: '#services' },
@@ -47,13 +59,13 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 sm:py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-2 rounded-lg">
-              <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+            <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-1.5 sm:p-2 rounded-lg">
+              <Zap className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-white" />
             </div>
-            <span className={`text-lg sm:text-xl font-bold transition-colors duration-300 ${
+            <span className={`text-base sm:text-lg lg:text-xl font-bold transition-colors duration-300 ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>
               DigiServWeb
@@ -90,6 +102,7 @@ const Header = () => {
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

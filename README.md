@@ -1,6 +1,6 @@
-# Digital Service Technologie - Site Web Officiel
+# Digital Service Web - Site Web Officiel
 
-[![Digital Service Technologie](https://img.shields.io/badge/Digital%20Service%20Technologie-Agence%20Digitale-blue)](https://digiservweb.com)
+[![Digital Service Web](https://img.shields.io/badge/Digital%20Service%20Technologie-Agence%20Digitale-blue)](https://digiservweb.com)
 [![React](https://img.shields.io/badge/React-18.3.1-blue)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.1-blue)](https://tailwindcss.com/)
@@ -8,7 +8,7 @@
 
 ## 🚀 À Propos
 
-Site web officiel de **Digital Service Technologie**, agence digitale innovante au Maroc spécialisée en développement web, applications mobiles, social media management et branding.
+Site web officiel de **Digital Service Web**, agence digitale innovante au Maroc spécialisée en développement web, applications mobiles, social media management et branding.
 
 **Votre vision, notre expertise** - Nous transformons vos idées en solutions digitales performantes et sur mesure.
 
@@ -116,13 +116,13 @@ digiserve-site/
 
 ## 🌍 Localisation
 
-**Digital Service Technologie** est basée à **Casablanca, Maroc** et sert des clients dans tout le Maroc et à l'international.
+**Digital Service Web** est basée à **Fès, Maroc** et sert des clients dans tout le Maroc et à l'international.
 
 ## 📞 Contact
 
 - **Email**: contact@digiservweb.com
 - **Téléphone**: +212 6 XX XX XX XX
-- **Adresse**: Casablanca, Maroc
+- **Adresse**: Fès, Maroc
 - **Site Web**: [https://digiservweb.com](https://digiservweb.com)
 
 ## 🔗 Réseaux Sociaux
@@ -176,4 +176,4 @@ npm run analyze      # Analyse la taille du bundle
 
 ---
 
-**Digital Service Technologie** - Votre partenaire digital au Maroc 🇲🇦 
+**Digital Service Web** - Votre partenaire digital au Maroc 🇲🇦 

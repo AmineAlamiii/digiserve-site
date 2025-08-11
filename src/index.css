@@ -33,8 +33,53 @@ html {
   }
 }
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .animate-fadeInUp {
   animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-fadeInDown {
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out;
 }
 
 /* Line clamp utility */
@@ -118,14 +163,14 @@ select:focus {
 }
 
 /* Mobile optimizations */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
   
   .text-responsive {
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(0.875rem, 4vw, 1.25rem);
   }
 
   /* Improve touch targets on mobile */
@@ -164,10 +209,26 @@ select:focus {
     margin: 0.5rem;
     border-radius: 1rem;
   }
+
+  /* Improve text readability on mobile */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+  }
+
+  /* Better button spacing on mobile */
+  .mobile-button-group {
+    gap: 0.75rem;
+  }
+
+  /* Optimize grid layouts for mobile */
+  .mobile-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 /* Tablet optimizations */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
   .tablet-container {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -176,6 +237,21 @@ select:focus {
   .tablet-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Better spacing for tablets */
+  .tablet-spacing {
+    padding: 1.5rem;
+  }
+
+  /* Optimize text sizes for tablets */
+  .tablet-text {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  /* Improve card layouts for tablets */
+  .tablet-card {
+    padding: 1.5rem;
+  }
 }
 
 /* Large screen optimizations */
@@ -183,6 +259,12 @@ select:focus {
   .desktop-container {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  /* Better hover effects for desktop */
+  .desktop-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -218,4 +300,100 @@ select:focus {
     font-size: 12pt;
     line-height: 1.4;
   }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 640px) and (orientation: landscape) {
+  .landscape-mobile {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .landscape-mobile h1 {
+    font-size: 1.5rem;
+  }
+
+  .landscape-mobile h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .xs-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .xs-text {
+    font-size: 0.875rem;
+  }
+
+  .xs-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: no-preference) {
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Focus management for better accessibility */
+.focus-visible:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Better form styling */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+}
+
+.form-input:focus {
+  @apply outline-none;
+}
+
+/* Responsive typography utilities */
+.text-responsive-xs {
+  font-size: clamp(0.75rem, 3vw, 1rem);
+}
+
+.text-responsive-sm {
+  font-size: clamp(0.875rem, 3.5vw, 1.125rem);
+}
+
+.text-responsive-base {
+  font-size: clamp(1rem, 4vw, 1.25rem);
+}
+
+.text-responsive-lg {
+  font-size: clamp(1.125rem, 4.5vw, 1.5rem);
+}
+
+.text-responsive-xl {
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
+}
+
+.text-responsive-2xl {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+}
+
+.text-responsive-3xl {
+  font-size: clamp(1.875rem, 7vw, 2.5rem);
+}
+
+.text-responsive-4xl {
+  font-size: clamp(2.25rem, 8vw, 3rem);
+}
+
+.text-responsive-5xl {
+  font-size: clamp(3rem, 10vw, 4rem);
+}
+
+.text-responsive-6xl {
+  font-size: clamp(3.75rem, 12vw, 5rem);
 }
