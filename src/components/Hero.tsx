@@ -45,7 +45,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 sm:px-4">
-            Agence digitale innovante au Maroc, nous transformons vos idées en solutions digitales performantes et sur mesure.
+            Agence digitale innovante , nous transformons vos idées en solutions digitales performantes et sur mesure.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 px-2 sm:px-4">

@@ -1,7 +1,7 @@
 {
   "name": "Digital Service Web",
   "short_name": "DigiServWeb",
-  "description": "Agence digitale innovante au Maroc. Développement web, applications mobiles, social media management et branding.",
+  "description": "Agence digitale innovante . Développement web, applications mobiles, social media management et branding.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

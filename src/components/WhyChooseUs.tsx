@@ -37,24 +37,25 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+        <div className="flex flex-nowrap overflow-x-auto gap-2 sm:gap-3 md:gap-4 lg:gap-6 pb-4">
           {advantages.map((advantage, index) => {
             const IconComponent = advantage.icon;
             return (
               <div
                 key={index}
-                className="text-center group hover:transform hover:scale-105 transition-all duration-300"
+                className="text-center group hover:transform hover:scale-105 transition-all duration-300 flex-shrink-0"
+                style={{ minWidth: '200px', width: '25%' }}
               >
-                <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mb-3 sm:mb-4 md:mb-6">
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-3 md:mb-4 group-hover:rotate-6 transition-transform duration-300">
-                    <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-white" />
+                <div className="bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mb-2 sm:mb-3 md:mb-6 h-full">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-1.5 sm:mb-2 md:mb-3 lg:mb-4 group-hover:rotate-6 transition-transform duration-300">
+                    <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 text-white" />
                   </div>
                   
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1.5 sm:mb-2 md:mb-3">
+                  <h3 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-gray-900 mb-1 sm:mb-1.5 md:mb-2 lg:mb-3">
                     {advantage.title}
                   </h3>
                   
-                  <p className="text-gray-600 leading-relaxed text-xs sm:text-sm md:text-base">
+                  <p className="text-gray-600 leading-relaxed text-xs sm:text-xs md:text-sm lg:text-base">
                     {advantage.description}
                   </p>
                 </div>

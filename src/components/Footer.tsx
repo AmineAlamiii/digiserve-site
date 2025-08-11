@@ -16,7 +16,8 @@ const Footer = () => {
     'Applications Mobiles',
     'Social Media',
     'Branding & Design',
-    'Shooting Photo'
+    'Shooting Photo',
+    'Digital Marketing'
   ];
 
   const socialLinks = [
@@ -128,26 +129,6 @@ const Footer = () => {
                 className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-xs sm:text-sm md:text-base"
               >
                 Contactez-nous maintenant
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Newsletter */}
-        <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
-          <div className="text-center">
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-1.5 sm:mb-2">Restez informé</h3>
-            <p className="text-gray-300 mb-3 sm:mb-4 md:mb-6 text-xs sm:text-sm md:text-base">
-              Recevez nos dernières actualités et conseils digitaux
-            </p>
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Votre adresse email"
-                className="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 text-xs sm:text-sm md:text-base"
-              />
-              <button className="bg-white text-gray-900 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200 text-xs sm:text-sm md:text-base">
-                S'abonner
               </button>
             </div>
           </div>

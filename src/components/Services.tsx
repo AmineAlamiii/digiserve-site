@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Smartphone, Share2, Palette, Camera } from 'lucide-react';
+import { Code, Smartphone, Share2, Palette, Camera, Database } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -32,6 +32,12 @@ const Services = () => {
       title: 'Shooting Photo Pro',
       description: 'Photographie professionnelle pour valoriser votre entreprise et vos produits.',
       features: ['Photos corporate', 'Produits & services', 'Retouche professionnelle', 'Usage commercial']
+    },
+    {
+      icon: Database,
+      title: 'Digital Marketing',
+      description: 'Stratégies marketing digital complètes pour augmenter votre visibilité et générer des leads qualifiés.',
+      features: ['SEO & SEM', 'Content Marketing', 'Email Marketing', 'Analytics & ROI']
     }
   ];
 
@@ -75,11 +81,6 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-
-                <button className="mt-3 sm:mt-4 md:mt-6 text-blue-600 font-semibold hover:text-purple-600 transition-colors duration-300 flex items-center group text-xs sm:text-sm md:text-base">
-                  En savoir plus
-                  <span className="ml-1 sm:ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
-                </button>
               </div>
             );
           })}
