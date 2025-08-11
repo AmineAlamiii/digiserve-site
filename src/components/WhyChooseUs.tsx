@@ -1,10 +1,10 @@
 import React from 'react';
-import { Award, Clock, Users, Zap } from 'lucide-react';
+import { Award, Clock, Users, Brain, Palette, Camera } from 'lucide-react';
 
 const WhyChooseUs = () => {
   const advantages = [
     {
-      icon: Zap,
+      icon: Brain,
       title: 'Expertise Technique',
       description: 'Notre équipe maîtrise les dernières technologies pour vous offrir des solutions innovantes et performantes.'
     },
