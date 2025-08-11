@@ -58,10 +58,6 @@ const Footer = () => {
                 <span className="text-gray-300 text-xs sm:text-sm md:text-base">contact@digiservweb.com</span>
               </div>
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <Phone className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-blue-400 flex-shrink-0" />
-                <span className="text-gray-300 text-xs sm:text-sm md:text-base">+212 6 XX XX XX XX</span>
-              </div>
-              <div className="flex items-center space-x-2 sm:space-x-3">
                 <MapPin className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-blue-400 flex-shrink-0" />
                 <span className="text-gray-300 text-xs sm:text-sm md:text-base">Fès, Maroc</span>
               </div>

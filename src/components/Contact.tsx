@@ -77,12 +77,6 @@ const Contact = () => {
       description: 'Réponse sous 24h'
     },
     {
-      icon: Phone,
-      title: 'Téléphone',
-      info: '+212 6 XX XX XX XX',
-      description: 'Lun-Sam 9h-18h'
-    },
-    {
       icon: MapPin,
       title: 'Adresse',
       info: 'Fès, Maroc',
@@ -102,6 +96,7 @@ const Contact = () => {
     'Social Media Management',
     'Branding & Identité',
     'Shooting Photo',
+    'Digital Marketing',
     'Autre'
   ];
 
