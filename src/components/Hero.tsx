@@ -45,7 +45,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 sm:px-4">
-            Agence digitale innovante , nous transformons vos idées en solutions digitales performantes et sur mesure.
+            Agence digitale innovante au Maroc, nous transformons vos idées en solutions digitales performantes et sur mesure.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 px-2 sm:px-4">
@@ -57,6 +57,7 @@ const Hero = () => {
               <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
             
+            {/* Bouton vidéo commenté temporairement
             <button 
               onClick={openVideo}
               className="flex items-center justify-center gap-2 sm:gap-3 text-white hover:text-blue-400 transition-colors duration-300 w-full sm:w-auto"
@@ -66,6 +67,7 @@ const Hero = () => {
               </div>
               <span className="text-sm sm:text-base md:text-lg font-medium">Voir notre présentation</span>
             </button>
+            */}
           </div>
 
           {/* Stats */}
@@ -92,7 +94,9 @@ const Hero = () => {
       </div>
     </section>
 
+      {/* Modal vidéo commenté temporairement
       <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
+      */}
     </>
   );
 };

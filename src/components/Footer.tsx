@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Zap, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,10 +21,8 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', name: 'Facebook' },
-    { icon: Instagram, href: '#', name: 'Instagram' },
-    { icon: Linkedin, href: '#', name: 'LinkedIn' },
-    { icon: Twitter, href: '#', name: 'Twitter' }
+    { icon: Facebook, href: 'https://web.facebook.com/profile.php?id=61578966977221', name: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/digiservweb/', name: 'Instagram' }
   ];
 
   const scrollToSection = (href: string) => {
@@ -108,6 +106,8 @@ const Footer = () => {
                     <a
                       key={social.name}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-gray-800 p-2 sm:p-2.5 md:p-3 rounded-full hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-110"
                       aria-label={social.name}
                     >
