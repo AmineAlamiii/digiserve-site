@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,13 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init("JlsQkVky7y5uUVhEW"); // Vous devrez remplacer par votre clé publique EmailJS
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -19,28 +27,53 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: ''
-    });
+    setIsLoading(true);
+    setError('');
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        from_phone: formData.phone,
+        from_company: formData.company,
+        service: formData.service,
+        message: formData.message,
+        to_email: 'contact@digiservweb.com'
+      };
+
+      await emailjs.send(
+        'service_ryrn3cg', // Vous devrez remplacer par votre Service ID EmailJS
+        'template_thjys2b', // Vous devrez remplacer par votre Template ID EmailJS
+        templateParams
+      );
+
+      setIsSubmitted(true);
+      setTimeout(() => setIsSubmitted(false), 5000);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
+      setError('Une erreur est survenue lors de l\'envoi. Veuillez réessayer.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const contactInfo = [
     {
       icon: Mail,
       title: 'Email',
-      info: 'contact@digitalservice.ma',
+      info: 'contact@digiservweb.com',
       description: 'Réponse sous 24h'
     },
     {
@@ -136,6 +169,15 @@ const Contact = () => {
                 <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
                 <p className="text-green-700 text-sm sm:text-base">
                   Merci ! Votre message a été envoyé. Nous vous répondrons sous 24h.
+                </p>
+              </div>
+            )}
+
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 flex items-center">
+                <AlertCircle className="h-4 w-4 sm:h-5 sm:w-5 text-red-500 mr-2 sm:mr-3 flex-shrink-0" />
+                <p className="text-red-700 text-sm sm:text-base">
+                  {error}
                 </p>
               </div>
             )}
@@ -240,10 +282,24 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+                disabled={isLoading}
+                className={`w-full px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
+                  isLoading 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:shadow-lg transform hover:scale-105'
+                }`}
               >
-                <Send className="h-4 w-4 sm:h-5 sm:w-5" />
-                Envoyer ma demande
+                {isLoading ? (
+                  <>
+                    <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white"></div>
+                    Envoi en cours...
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-4 w-4 sm:h-5 sm:w-5" />
+                    Envoyer ma demande
+                  </>
+                )}
               </button>
             </form>
 

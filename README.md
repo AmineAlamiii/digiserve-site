@@ -33,7 +33,7 @@ Site web officiel de **Digital Service Technologie**, agence digitale innovante 
 
 ```bash
 # Cloner le repository
-git clone https://github.com/digiservtech/website.git
+git clone https://github.com/digiservweb/website.git
 cd website
 
 # Installer les dépendances
@@ -127,9 +127,9 @@ digiserve-site/
 
 ## 🔗 Réseaux Sociaux
 
-- [Facebook](https://www.facebook.com/digiservtech)
-- [LinkedIn](https://www.linkedin.com/company/digiservtech)
-- [Instagram](https://www.instagram.com/digiservtech)
+- [Facebook](https://www.facebook.com/digiservweb)
+- [LinkedIn](https://www.linkedin.com/company/digiservweb)
+- [Instagram](https://www.instagram.com/digiservweb)
 
 ## 📄 Licence
 

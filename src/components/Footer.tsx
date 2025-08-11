@@ -43,7 +43,7 @@ const Footer = () => {
               <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-2 rounded-lg">
                 <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
-              <span className="text-lg sm:text-xl font-bold">DigiServTech</span>
+              <span className="text-lg sm:text-xl font-bold">DigiServWeb</span>
             </div>
             
             <p className="text-gray-300 mb-4 sm:mb-6 max-w-md leading-relaxed text-sm sm:text-base">
@@ -54,7 +54,7 @@ const Footer = () => {
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm sm:text-base">contact@digitalservice.ma</span>
+                <span className="text-gray-300 text-sm sm:text-base">contact@digiservweb.com</span>
               </div>
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 flex-shrink-0" />
