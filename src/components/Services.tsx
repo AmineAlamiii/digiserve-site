@@ -35,8 +35,8 @@ const Services = () => {
     },
     {
       icon: Database,
-      title: 'Digital Marketing',
-      description: 'Stratégies marketing digital complètes pour augmenter votre visibilité et générer des leads qualifiés.',
+      title: 'Marketing DIGITAL',
+      description: 'Stratégies marketing DIGITAL complètes pour augmenter votre visibilité et générer des leads qualifiés.',
       features: ['SEO & SEM', 'Content Marketing', 'Email Marketing', 'Analytics & ROI']
     }
   ];
@@ -46,10 +46,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
-            Nos Services
+            Nos Services <span className="text-blue-600">DIGITAUX</span>
           </h2>
           <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2 sm:px-4">
-            Des solutions digitales complètes pour propulser votre entreprise vers le succès
+            Des solutions <strong>DIGITALES</strong> complètes pour propulser votre entreprise vers le succès <strong>DIGITAL</strong>
           </p>
         </div>
 

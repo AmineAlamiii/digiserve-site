@@ -30,10 +30,10 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
-            Pourquoi Nous Choisir ?
+            Pourquoi Choisir notre Agence <span className="text-blue-600">DIGITALE</span> ?
           </h2>
           <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2 sm:px-4">
-            Des avantages concrets qui font la différence pour votre succès digital
+            Des avantages concrets qui font la différence pour votre succès <strong>DIGITAL</strong> et votre transformation <strong>DIGITALE</strong>
           </p>
         </div>
 
@@ -68,10 +68,10 @@ const WhyChooseUs = () => {
         <div className="text-center mt-8 sm:mt-12 md:mt-16">
           <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl max-w-4xl mx-auto">
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
-              Prêt à démarrer votre projet ?
+              Prêt à démarrer votre projet <span className="text-blue-600">DIGITAL</span> ?
             </h3>
             <p className="text-gray-600 mb-3 sm:mb-4 md:mb-6 text-xs sm:text-sm md:text-base">
-              Discutons de vos besoins et créons ensemble la solution digitale parfaite pour votre entreprise.
+              Discutons de vos besoins et créons ensemble la solution <strong>DIGITALE</strong> parfaite pour votre entreprise.
             </p>
             <button 
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}

@@ -41,11 +41,11 @@ const Hero = () => {
         <div className="animate-fadeInUp">
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Votre vision <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block sm:inline">DIGITAL</span>,
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block sm:inline"> notre expertise</span>
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block sm:inline"> notre expertise DIGITALE</span>
           </h1>
           
           <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 sm:px-4">
-            Agence <strong>DIGITAL</strong> innovante , nous transformons vos idées en solutions <strong>DIGITALES</strong> performantes et sur mesure.
+            Agence <strong>DIGITAL</strong> innovante au Maroc, nous transformons vos idées en solutions <strong>DIGITALES</strong> performantes et sur mesure. Expert en transformation <strong>DIGITALE</strong> pour propulser votre business.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 px-2 sm:px-4">
