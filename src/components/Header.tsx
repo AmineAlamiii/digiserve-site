@@ -40,7 +40,8 @@ const Header = () => {
 
   const menuItems = [
     { name: 'Accueil', href: '#home' },
-    { name: 'Services', href: '#services' },
+    { name: 'Services DIGITAUX', href: '#services' },
+    { name: 'Expertise DIGITALE', href: '#digital-expertise' },
     { name: 'Portfolio', href: '#portfolio' },
   ];
 
@@ -65,11 +66,18 @@ const Header = () => {
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-1.5 sm:p-2 rounded-lg">
               <Zap className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-white" />
             </div>
-            <span className={`text-base sm:text-lg lg:text-xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
-              DigiServWeb
-            </span>
+            <div className="flex flex-col">
+              <span className={`text-base sm:text-lg lg:text-xl font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>
+                DigiServWeb
+              </span>
+              <span className={`text-xs sm:text-sm transition-colors duration-300 ${
+                isScrolled ? 'text-gray-600' : 'text-gray-300'
+              }`}>
+                Agence DIGITALE Maroc
+              </span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -92,7 +100,7 @@ const Header = () => {
             onClick={() => scrollToSection('#contact')}
             className="hidden lg:block bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300"
           >
-            Nous Contacter
+            Projet DIGITAL
           </button>
 
           {/* Mobile Menu Button */}
@@ -130,7 +138,7 @@ const Header = () => {
                 onClick={() => scrollToSection('#contact')}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-full font-medium text-center block hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
-                Nous Contacter
+                Projet DIGITAL
               </button>
             </div>
           </div>
