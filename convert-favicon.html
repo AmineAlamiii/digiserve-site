@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur Favicon - DigiServWeb</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .preview {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            align-items: center;
+        }
+        .preview svg {
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 10px;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+        }
+        .preview canvas {
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 10px;
+            background: white;
+        }
+        button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        .download-links {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .download-links a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 8px;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        .download-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        .instructions {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .instructions ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Convertisseur Favicon DigiServWeb</h1>
+        
+        <div class="instructions">
+            <h3>📋 Instructions :</h3>
+            <ol>
+                <li>Cliquez sur "Convertir en PNG"</li>
+                <li>Téléchargez tous les fichiers</li>
+                <li>Remplacez les fichiers dans le dossier <code>public/</code></li>
+                <li>Déployez votre site</li>
+            </ol>
+        </div>
+
+        <div class="preview">
+            <div>
+                <h4>Votre SVG original :</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#gradient)"/>
+                    <path d="M14 6L8 12h4l-1 4 6-6h-4l1-4z" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div>
+                <h4>PNG converti :</h4>
+                <canvas id="previewCanvas" width="80" height="80"></canvas>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button onclick="convertToPNG()">🔄 Convertir en PNG</button>
+            <button onclick="downloadAllSizes()">📥 Télécharger tout</button>
+        </div>
+
+        <div class="download-links" id="downloadLinks" style="display: none;">
+            <h3>📁 Fichiers à télécharger :</h3>
+            <a href="#" id="download16" download="favicon-16x16.png">16x16 PNG</a>
+            <a href="#" id="download32" download="favicon-32x32.png">32x32 PNG</a>
+            <a href="#" id="download180" download="apple-touch-icon.png">180x180 PNG</a>
+            <a href="#" id="download512" download="favicon-512x512.png">512x512 PNG</a>
+        </div>
+    </div>
+
+    <script>
+        function convertToPNG() {
+            const svg = document.querySelector('svg');
+            const canvas = document.getElementById('previewCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Créer une image à partir du SVG
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const img = new Image();
+            
+            img.onload = function() {
+                // Dessiner l'image sur le canvas
+                ctx.drawImage(img, 0, 0, 80, 80);
+                
+                // Afficher les liens de téléchargement
+                document.getElementById('downloadLinks').style.display = 'block';
+                
+                // Préparer les liens de téléchargement
+                prepareDownloadLinks();
+            };
+            
+            img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
+        }
+
+        function prepareDownloadLinks() {
+            const sizes = [16, 32, 180, 512];
+            
+            sizes.forEach(size => {
+                const canvas = document.createElement('canvas');
+                canvas.width = size;
+                canvas.height = size;
+                const ctx = canvas.getContext('2d');
+                
+                const svg = document.querySelector('svg');
+                const svgData = new XMLSerializer().serializeToString(svg);
+                const img = new Image();
+                
+                img.onload = function() {
+                    ctx.drawImage(img, 0, 0, size, size);
+                    
+                    const link = document.getElementById(`download${size}`);
+                    link.href = canvas.toDataURL('image/png');
+                };
+                
+                img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
+            });
+        }
+
+        function downloadAllSizes() {
+            convertToPNG();
+            setTimeout(() => {
+                const links = document.querySelectorAll('.download-links a');
+                links.forEach(link => {
+                    link.click();
+                });
+            }, 1000);
+        }
+
+        // Convertir automatiquement au chargement
+        window.onload = function() {
+            setTimeout(convertToPNG, 500);
+        };
+    </script>
+</body>
+</html> 
