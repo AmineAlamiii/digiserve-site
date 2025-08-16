@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
             
             <p className="text-gray-300 mb-3 sm:mb-4 md:mb-6 max-w-md leading-relaxed text-xs sm:text-sm md:text-base">
-              Votre partenaire digital au Maroc. Nous transformons vos idées en solutions digitales performantes 
+              <strong>Digital Service Web</strong> - Votre partenaire digital au Maroc. Nous transformons vos idées en solutions digitales performantes 
               qui propulsent votre business vers le succès.
             </p>
 

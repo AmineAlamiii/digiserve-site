@@ -24,7 +24,7 @@ const DigitalExpertise = () => {
     {
       icon: Award,
       title: 'Innovation DIGITALE',
-      description: 'Pionnier de l\'innovation DIGITALE au Maroc, nous intégrons les dernières technologies pour vous donner un avantage concurrentiel.',
+      description: 'Pionnier de l\'innovation DIGITALE , nous intégrons les dernières technologies pour vous donner un avantage concurrentiel.',
       benefits: ['IA & Machine Learning', 'Cloud Computing', 'IoT & Smart Solutions', 'Blockchain & Web3']
     },
     {
@@ -49,7 +49,7 @@ const DigitalExpertise = () => {
             Notre Expertise <span className="text-blue-600">DIGITALE</span>
           </h2>
           <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto px-2 sm:px-4">
-            Leader de l'innovation <strong>DIGITALE</strong> au Maroc, nous vous accompagnons dans votre transformation <strong>DIGITALE</strong>  avec des solutions <strong>DIGITALES</strong> sur mesure et une expertise <strong>DIGITALE</strong> reconnue.
+            Leader de l'innovation <strong>DIGITALE</strong> , nous vous accompagnons dans votre transformation <strong>DIGITALE</strong>  avec des solutions <strong>DIGITALES</strong> sur mesure et une expertise <strong>DIGITALE</strong> reconnue.
           </p>
         </div>
 
