@@ -75,7 +75,7 @@ const Header = () => {
               <span className={`text-xs sm:text-sm transition-colors duration-300 ${
                 isScrolled ? 'text-gray-600' : 'text-gray-300'
               }`}>
-                Agence DIGITALE Maroc
+                Agence DIGITALE 
               </span>
             </div>
           </div>

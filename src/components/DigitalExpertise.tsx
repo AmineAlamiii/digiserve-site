@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, Users, Target, Award, Zap, Globe } from 'lucide-react';
+import { TrendingUp, Users, Target, Award, Gauge, Globe } from 'lucide-react';
 
 const DigitalExpertise = () => {
   const expertise = [
@@ -28,7 +28,7 @@ const DigitalExpertise = () => {
       benefits: ['IA & Machine Learning', 'Cloud Computing', 'IoT & Smart Solutions', 'Blockchain & Web3']
     },
     {
-      icon: Zap,
+      icon: Gauge,
       title: 'Performance DIGITALE',
       description: 'Optimisation de vos performances DIGITALES pour maximiser votre ROI et atteindre vos objectifs business rapidement.',
       benefits: ['Audit de performance', 'Optimisation continue', 'Monitoring avancé', 'Reporting détaillé']
@@ -49,8 +49,7 @@ const DigitalExpertise = () => {
             Notre Expertise <span className="text-blue-600">DIGITALE</span>
           </h2>
           <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto px-2 sm:px-4">
-            Leader de l'innovation <strong>DIGITALE</strong> au Maroc, nous vous accompagnons dans votre transformation <strong>DIGITALE</strong> 
-            avec des solutions <strong>DIGITALES</strong> sur mesure et une expertise <strong>DIGITALE</strong> reconnue.
+            Leader de l'innovation <strong>DIGITALE</strong> au Maroc, nous vous accompagnons dans votre transformation <strong>DIGITALE</strong>  avec des solutions <strong>DIGITALES</strong> sur mesure et une expertise <strong>DIGITALE</strong> reconnue.
           </p>
         </div>
 
